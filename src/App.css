@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.app {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131c21;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19),
+    0 12px 15px 0 rgba(0, 0, 0, 0.24);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .MuiSvgIcon-root {
+  width: 50px;
+  height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  background-color: #262d31;
+  height: 90vh;
+  display: flex;
+  padding: 120px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fasttext__form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background: #3b4042;
+  padding: 22px 24px 20px;
+  border-radius: 3px;
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19),
+    0 12px 15px 0 rgba(0, 0, 0, 0.24);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fasttext__form > p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.PhoneInput {
+  background-color: #323739;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #f1f1f2;
+  border-radius: 5%;
+}
+
+.PhoneInputCountry {
+  padding-right: 10px;
+}
+
+.PhoneInput > input {
+  background-color: transparent;
+  outline: none;
+  border:none;
+  padding: 5px;
+  color: white;
+  font-size: 15px;
+}
+
+.fasttext__button {
+  background-color: #00c3ae !important;
+  padding: 10px 24px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3b4042;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .MuiSvgIcon-root {
+  color: white;
 }
