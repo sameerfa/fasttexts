@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <style type="text/css">
+    <style>
       * {
         margin: 0;
         font-family: "Source Sans Pro", sans-serif;
@@ -70,11 +70,11 @@
       </div>
       <div class="main"><p class="loader">Loading...</p></div>
     </div>
-    <script>
+    <script type="text/javascript">
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
           navigator.serviceWorker
-            .register("worker.js")
+            .register("./worker.js")
             .then(
               function (registration) {
                 console.log(
@@ -93,10 +93,6 @@
       } else {
         console.log("Service Worker is not supported by browser.");
       }
-
-      window.addEventListener("beforeinstallprompt", (ev) => {
-        ev.prompt();
-      });
     </script>
   </body>
 </html>
