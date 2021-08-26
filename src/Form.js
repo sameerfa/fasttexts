@@ -13,7 +13,7 @@ function Form() {
       e.preventDefault();
       const to = phone.split("+")[1];
       if (to) {
-        window.open("https://web.whatsapp.com/send?phone=" + to);
+        window.open("https://api.whatsapp.com/send?phone=" + to);
       }
     };
   return (
@@ -25,6 +25,7 @@ function Form() {
           value={phone}
           placeholder="Phone Number"
           onChange={setPhone}
+          autoComplete="none"
         />
         <Button
           type="submit"

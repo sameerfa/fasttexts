@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#131c21" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Send Whatsapp messages without saving the number."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/icons-512.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -47,16 +47,28 @@
         flex-direction: column;
         color: white;
       }
+      .loader {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          color: #3b4042;
+        }
+        100% {
+          color: #00c3ae;
+        }
+      }
     </style>
-    <title>FastTxts</title>
+    <title>FastTexts</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="header">
-        <h1>FastTxts</h1>
+        <h1>FastTexts</h1>
       </div>
-      <div class="main"><p>Loading...</p></div>
+      <div class="main"><p class="loader">Loading...</p></div>
     </div>
     <script>
       if ("serviceWorker" in navigator) {
@@ -81,6 +93,10 @@
       } else {
         console.log("Service Worker is not supported by browser.");
       }
+
+      window.addEventListener("beforeinstallprompt", (ev) => {
+        ev.prompt();
+      });
     </script>
   </body>
 </html>
