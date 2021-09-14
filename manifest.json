@@ -1,6 +1,6 @@
 {
     "short_name": "FastTexts",
-    "name": "Send Whatsapp messages with saving number",
+    "name": "Send Whatsapp messages without saving numbers",
     "icons": [
       {
         "src": "./images/icons-512.png",
